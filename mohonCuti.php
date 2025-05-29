@@ -55,8 +55,96 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Mohon Cuti</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f5fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: 60px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #10266F;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #10266F;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="file"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px 14px;
+            margin-bottom: 20px;
+            border: 1px solid #ccd6e0;
+            border-radius: 10px;
+            background-color: #fff;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #10266F;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(16, 38, 111, 0.15);
+        }
+
+        button {
+            width: 100%;
+            background-color: #10266F;
+            color: white;
+            padding: 14px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0d1e59;
+        }
+
+        .message {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 12px;
+            border-radius: 10px;
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        @media (max-width: 600px) {
+            .form-container {
+                margin: 30px 20px;
+                padding: 30px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="form-container">
     <h2>Mohon Cuti</h2>
     <form method="post" enctype="multipart/form-data">
         Nama Penuh: <input type="text" name="nama_penuh" required><br>
@@ -72,5 +160,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         Bukti: <input type="file" name="bukti"><br>
         <button type="submit">Mohon Cuti</button>
     </form>
+    </div>
 </body>
 </html>
